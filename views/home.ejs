@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+
+<section class="jumbotron text-center">
+  <% posts.forEach(function(post){    %>
+  <div class="container">
+    <h2 class="jumbotron-heading"><%=post.title%></h2>
+    <p class="lead text-muted">
+        <%=post.content.substring(0,200) + " ..." %>
+        <a href="/posts/ <%= post.title %> ">Read More</a>
+    </p>
+  </div>
+  <%  });  %>
+</section>
+
+
+<%- include('partials/footer'); -%>
